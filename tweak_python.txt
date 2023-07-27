@@ -1,0 +1,8 @@
+
+0, 0, 0
+group mean difference	 1.0835e-05
+group deviation diff	 1.1334e-02
+
+50, 30, 0
+group mean difference	 -5.1006e-02
+group deviation diff	 1.1316e-02

@@ -1,4 +1,9 @@
 library(dplyr)
+file2 = "C:/Users/alelen/Documents/Export Data/random_group.txt"
+df_group <- read.table(file2, sep="", header=T, row.names = 1)
+
+d1 <- subset(df_group, group %in% c("A", "B", "C"))
+d2 <- subset(df_group, group == "D")
 
 # Create DataFrame
 df1 <- data.frame(
@@ -14,3 +19,5 @@ df1
 df1 %>% select(2,3)
 df1 %>% select('name','gender')
 df1 %>% select(-c('name','gender'))
+
+df1$name
