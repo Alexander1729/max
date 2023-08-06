@@ -1,0 +1,30 @@
+import pandas as pd
+import numpy as np
+
+# rank_df = pd.read_excel("C:/Users/alelen/Documents/Export Data/point_measure_rank.xlsx", header=None).dropna()
+rank_df = pd.read_excel("/Users/alexander/Documents/2023/MaxIV/Project Point/max2/point_measure_rank.xlsx", header=None).dropna()
+
+ss = rank_df.loc[:,1].str.split("ST").str[1].str.split(" ")
+rank_df['rank'] = ss.str[-2]
+rank_df.loc[:, 'rank'] = rank_df['rank'].str.removesuffix("%")
+rank_df['Group'] = "ST"+(ss.str[0])
+
+rank_df_org = rank_df.loc[:, ('Group', 0, 'rank')]
+rank_df_org.rename(columns={0:"Point"}, inplace=True)
+rank_df_org.loc[:,'rank'] = rank_df.loc[:,'rank'].astype('int')
+
+tmp_df = pd.DataFrame(columns=['Group', 'Point', 'mean_rank(2)'])
+
+unique_group = rank_df_org['Group'].unique()
+for i,val in enumerate(unique_group):
+    df_st = rank_df_org.groupby(["Group"]).get_group(val)
+    df_st_p = df_st.groupby(['Point'])
+    for j in df_st_p:
+        if(len(j) == 2):
+            c = [ val, j[0], j[1].mean(numeric_only = True)[0] ]
+            tmp_df.loc[len(tmp_df)] = np.array(c).T
+
+print("progress", len(tmp_df), len(rank_df))
+tmp_df
+
+
