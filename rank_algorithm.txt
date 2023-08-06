@@ -1,0 +1,55 @@
+for i,val in enumerate(unique_group):
+    df_st = rank_df_org.groupby(["Group"]).get_group(val)
+    if(len(df_st) == 1):
+        m_r = np.nan
+        c = [ val, pn, m_r, ]
+        c = np.array(c).T
+        tt_df = pd.DataFrame(data=c, columns=['Group', 'Point', 'mean_rank(2)'])
+        tmp_df = pd.concat(tmp_df,tt)
+    if(len(df_st) == 2):
+        i0 = df_st.index[0]
+        i1 = df_st.index[1]
+        if(df_st.loc[i0, 'Point'] == df_st.loc[i0, 'Point']):
+            print("Following algo works") 
+        else:
+            print("Have to be fixed")
+        m_rank = sum(list(df_st.loc[:, ('rank')]))/2
+        p =df_st.loc[df_st.index[0],('Point')]
+        tmp_df.loc[len(tmp_df)] = [val, p, m_rank]
+    elif(len(df_st) == 4):
+        lp_rank = list(df_st.loc[:, ('rank')])
+        m_r = [(lp_rank[2*n]+lp_rank[2*n+1])/2 for n in range(int(len(lp_rank)/2))]
+        sn =df_st.loc[df_st.index[0],('Group')]
+        p =df_st.loc[df_st.index,('Point')]
+        pn = [p[p.index[2*n]] for n in range(int(len(lp_rank)/2))]
+        sn = [sn for nn in range(int(len(lp_rank)/2))]
+        c = [
+            sn,
+            pn,
+            m_r,
+        ]
+        c = np.array(c).T
+        tt_df = pd.DataFrame(data=c, columns=['Group', 'Point', 'mean_rank(2)'])
+        print('tt')
+        print(tt_df.to_markdown())
+        tmp_df = pd.concat([tmp_df,tt_df])
+        print(df_st.to_markdown())
+        print(lp_rank,sn)
+        print(p,pn,m_r)
+        # print(p,p2)
+    elif(len(df_st) == 7):
+        df_st_p = df_st.groupby(['Point'])
+        for i in df_st_p:
+            if(len(i) == 2):
+                pn = i[0]
+                m_r = i[1].mean()[0]
+                c = [ val, pn, m_r, ]
+                c = np.array(c).T
+                col3 =['Group', 'Point', 'mean_rank(2)'] 
+                tt_df = pd.DataFrame(data=c, columns=col3)
+        print("7 measurements")
+        print(df_st.to_markdown())
+    else:
+        # print("Failure", len(df_st))
+        failure_count+=1
+
