@@ -4,10 +4,14 @@ library(dplyr)
 library(psych)
 library(tidyverse)
 
-file1 = "C:/Users/alelen/Documents/Export Data/All_points_cleaned8.txt"
+library(readr)
+# rank_d_r <- read_csv("Project Points/rank_d_r.csv")
+
+
+file1 = "Project Points/rank_d_r.csv"
 headers = read.csv(file1, header = F, nrows = 1, as.is = T)
-df_big = read.csv(file1, skip = 1, header = F)
-colnames(df_big) <- headers
+df = read.csv(file1, skip = 1, header = F)
+colnames(df) <- headers
 
 df_interesting <- df %>%
   select(Collection, Group, Point, X, Y, Z) %>%
@@ -49,13 +53,18 @@ df_intersection <- df_intersection %>%
 
 View(
   df_intersection %>% 
-  group_by(Point) %>%
-  summarize(X)
+    group_by(Point) %>%
+    summarize(X)
 )
 View(describe(df_intersection))
 
-fig <- plot_ly(data = df_by_collection, x = ~Point, y = 0, fill='Temperature', type='scatter', mode='markers',
-               error_y=~list(array=sd, 
-                             color = '#000000'))
+fig <- plot_ly(data = df, x = ~m_distance/1000, y = df$rank/df$m_distance, fill='Temperature', type='scatter', mode='markers')
+fig <- fig %>% layout(title = 'rank % / measured distance',
+                      xaxis = list(title = 'Measured distance (m) ',
+                                   zeroline = TRUE
+                      ),
+                      
+                      yaxis = list(title = 'rank/m_distance'
+                      ))
 
 fig

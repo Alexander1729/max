@@ -4,10 +4,10 @@ library(dplyr)
 library(psych)
 library(tidyverse)
 
-file1 = "C:/Users/alelen/Documents/Export Data/All_points_cleaned8.txt"
+file1 = "C:/Users/alelen/Documents/Export Data/All_points_cleaned9.txt"
 headers = read.csv(file1, header = F, nrows = 1, as.is = T)
-df_big = read.csv(file1, skip = 1, header = F)
-colnames(df_big) <- headers
+df = read.csv(file1, skip = 1, header = F)
+colnames(df) <- headers
 
 df_interesting <- df %>%
   select(Collection, Group, Point, X, Y, Z) %>%
@@ -53,9 +53,15 @@ View(
     summarize(X)
 )
 View(describe(df_intersection))
+z <- df$`[U-mag]`/df$m_distance
+fig <- plot_ly(data = df, x = ~df$m_distance/1000, y = z, fill='Temperature', type='scatter', mode='markers')
 
-fig <- plot_ly(data = df_by_collection, x = ~Point, y = 0, fill='Temperature', type='scatter', mode='markers',
-               error_y=~list(array=sd, 
-                             color = '#000000'))
+fig <- fig %>% layout(title = 'U_mag / measured distance',
+                      xaxis = list(title = 'Measured distance (m) ',
+                                   zeroline = TRUE
+                                   ),
+                  
+                      yaxis = list(title = 'U_mag/m_distance'
+                                   ))
 
 fig
