@@ -1,0 +1,14 @@
+weight	skinindex	amount		log_date(index?)
+api(in)	log_from	get_from	timestamp
+
+
+Risk 		Production	Flow		Time
+inv-risk	positive cycle	order of op	spread
+
+Beyond average	Representation	Fast to write to get it over quick. Make it automatic what it is trying to be said
+
+Write automatic to capture the main ideas about the subject.
+Possible? Yes, do that now. 
+
+What about concepts that require math?
+f(x) = x^2 
