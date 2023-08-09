@@ -1,0 +1,137 @@
+tf.keras.optimizers.schedules.InverseTimeDecay(
+)
+
+optimizers.schedules.InverseTimeDecay(
+)
+
+shedules.InverseTimeDecay(
+)
+
+tf.keras.optimizers.schedules.InverseTimeDecay(
+)
+
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entroopoy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+entropy
+losses.BinaryCrossentropy
+losses.BinaryCrossentropy
+# Tiny model
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tf.keras.sequential
+tial
+tial
+sequential
+sequential
+sequentialsequential
+sequential
+sequential
+sequential
+tf.keras.sequential([
+	layers.Dense
+	layers.Dense(
+	layers.Dense(
+	layers.Dense(
+	layers.Dense(
+	layers.Dense(
+	layers.Dense(
+	layers.Dense(
+	layers.Dense(
+
+HistoryPlotter
+HistoryPlotter
+HistoryPlotter
+HistoryPlotter
+HistoryPlotter
+HistoryPlotter
+HistoryPlotter
+tfdocs.plots.HistoryPlotter
+HistoryPlotter
+tfdocs.plots.HistoryPlotter
+features, features
+labels, labels
+Light on the fingers and write the code to flow. Thought out the text and
+abstract it, build on the understanding. Close source open source, motivated
+to make new software. When you are in the depth it doesn't matter if 
+well it does in terms of motivation, keep the model on why you end up in 
+certain thought patterns. When you seen the most in different levels of 
+abstractions. Keep the pattern and build upon it. Where it doen't make sense.
+To write it out as is. Do you develop pain how you hold the keyboard and 
+write it out. Possible to see when timestamp open folder and timestamp
+close folder. That is the mesaure of Written time + thinking time to 
+produce what you see infront of you. Push the envolope of creative process
+with good syntax. 
+
+In terms of writing better terms. How to describe the tf framework.
+
+# Tensorflow
+tf.keras
+Sequential
+layers.Dense()
+features
+labels
+normalization
+optimizers, optimizer
+regularizers 
+plt.scatter(one and the next)
+
+# Model
+Create the model to create a relationship between the parameters. For the 
+features and labels. Instead of condionally finding relationships, a good
+machine learning algorithm establishes the model for you.
+
+Write out the things that are supposed to happen. ge-pe-ty
+Any modern IDE. vim are what it is. Emacs binding known for being great
+
+Not an IDE, not knowing what you are talking about.
+What can the language. The tf model. 
+
+# Keras
+What is keras 
+Tensorflow is a machine learning platform
+Keras is the deep learning API running ontop of tensorflow, written in Python 
+# Explore new commands
+vimium for firefox. find uesful and searning for text. 

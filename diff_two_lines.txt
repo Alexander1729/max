@@ -1,0 +1,2 @@
+ds = tf.data.experimental.CsvDataset(gz, [float(),]*(FEATURES+1), compression_type="gzip")
+ds = tf.data.experimental.CsvDataset(gz,[float(),]*(FEATURES+1), compression_type="GZIP")
