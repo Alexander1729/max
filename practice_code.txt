@@ -1,3 +1,5 @@
+https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough#use_the_trained_model_to_make_predictions
+
 tf.keras.optimizers.schedules.InverseTimeDecay(
 )
 
@@ -135,3 +137,6 @@ Tensorflow is a machine learning platform
 Keras is the deep learning API running ontop of tensorflow, written in Python 
 # Explore new commands
 vimium for firefox. find uesful and searning for text. 
+
+Added a link to follow ML_applied
+
